@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="register_page">
+            <h2>
+                회원가입
+            </h2>
+
+            <div class="check_terms">
+                <label for="all_check"><input type="checkbox" id="all_check"> 전체 동의</label>
+
+                <div class="terms">
+                    <label for="terms_of_use"><input type="checkbox" id="terms_of_use"> 이용약관 동의(필수) <a href="termsUse.html">내용보기</a></label>
+                    <label for="privacy"><input type="checkbox" id="privacy"> 개인정보 수집 및 이용동의(필수) <a href="termsUse.html">내용보기</a></label>
+                </div>
+            </div>
+
+            <div class="register_form">
+                <div class="regi_top"><p>내 정보 입력</p> <span>*는 필수사항입니다.</span></div>
+
+                <form action="">
+                    <div class="regi_bottom">
+                        <p class="email">
+                            <input type="email" placeholder="*이메일" required>
+                            <a class="confirm">이메일 중복체크</a>
+                        </p>
+                        <p><input class="pw" type="password" placeholder="*비밀번호" required>
+                            <svg class="eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /></svg>
+                        </p>
+                        <p><input class="pw_confirm" type="password" placeholder="*비밀번호 확인" required>
+                            <svg class="eye_confirm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /></svg>
+                        </p>
+                        <p><input type="text" placeholder="*이름" required></p>
+                        <p class="phone">
+                            <input style="width:493px;" type="text" placeholder="*휴대전화" required>
+                            <a class="confirm">인증번호 발송</a>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="*인증번호" required>
+                        </p>
+                        <p><input class="submit_btn" type="submit" value="회원가입"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="popup_bg idSame_popup_bg">
+        <div class="idSame_popup">
+            <!-- 이메일이 중복될 경우 -->
+            <h3 class="active">중복된 이메일입니다.</h3>
+
+            <!-- 사용 가능한 이메일일 경우 -->
+            <h3>사용 가능한 이메일입니다.</h3>
+            <p><button>확인</button></p>
+        </div>
+    </div>
+
+    <footer></footer>
+</body>
+</html>
