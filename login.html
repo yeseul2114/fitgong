@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="gnb">
+                <!-- 로그아웃 상태 -->
+                <ul class="gnb_login logoutVer active">
+                    <li><a class="login" href="login.html">로그인</a></li>
+                    <li><a class="login" href="signUp.html">회원가입</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+        
+                <!-- 로그인 상태 -->
+                <ul class="gnb_login loginVer ">
+                    <li><a href="myFit.html">MY FIT</a></li>
+                    <li><a href="cart.html">장바구니</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="question.html">1:1문의</a></li>
+                    <li><a>로그아웃</a></li>
+                </ul>
+            </div>
+            
+            <div class="logo_area">
+        
+                <a href="#"><img src="img/freeEx.png" alt="무료체험"></a>
+        
+                <h1><a href="index.html"><img src="img/FITGONG.png" alt=""></a></h1>
+        
+                <label for="searchAll"><input type="search" placeholder="2022 공무원 강좌" id="searchAll"> <img src="img/icon_search.png" alt="돋보기"></label>
+            </div>
+            
+            <div class="nav">
+                <ul>
+                    <li><a href="studyRoom.html">공부방</a></li>
+                    <li><a href="reference_list.html">자료실</a></li>
+                    <li><a href="goods.html">상품구매</a></li>
+                    <li><a href="notice_list.html">공지사항</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login_page">
+            <h2>
+                로그인
+            </h2> 
+
+            <div class="login_form">
+                <form action="">
+                    <p><input type="email" placeholder="이메일"></p>
+                    <p><input type="password" class="pw" placeholder="비밀번호">
+                        <svg class="eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" /></svg>
+                    </p>
+
+                    <div class="sub_form">
+                        <p>
+                            <input type="checkbox" id="idRemember"> <label class="idRemember" for="idRemember"></label> 아이디 기억하기
+                        </p>
+        
+                        <p class="user">
+                            <a href="idFind.html">아이디/비밀번호 찾기</a>
+                        </p>
+                    </div>
+                    <p><input type="submit" class="loginBtn" value="로그인"></p>
+                    <p><input type="submit" class="joinBtn" value="회원가입"></p>
+                </form>
+
+
+
+                <div class="sns_login">
+                    <h3>SNS 로그인</h3>
+                    <div class="sns">
+                        <div class="naver"><a href="#"><img src="img/naver.png" alt=""></a></div>
+                        <div class="kakao"><a href="#"><img src="img/kakao.png" alt=""></a></div>
+                        <div class="google"><a href="#"><img src="img/google.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

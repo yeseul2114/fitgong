@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+         <div class="myFit">
+            <h2>MY FIT</h2>
+
+            <div class="myInfo">
+                <div class="infoEdit">
+                    <p>안녕하세요. <span style="color:#095ce5;">이예슬</span>님!</p>
+                    <a href="infoEdit.html">내 정보 수정</a>
+                </div>    
+                <div class="infoFlex">
+                    <div class="planInfo">
+                        <table>
+                            <tr>
+                                <th>구독 정보</th>
+                                <td style="color:#095ce5;">강의별 이용권</td>
+                            </tr>
+                            <tr>
+                                <th>이용기간</th>
+                                <td style="font-weight: bold;"></td>
+                            </tr>
+                            <tr>
+                                <th>다음 결제일</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>강의별 갯수</th>
+                                <td style="color:#095ce5;">5개</td>
+                            </tr>
+                        </table>
+                    
+                        <div class="quickBtn">
+                            <a class="myFitCoupon"><img src="img/coupon.png" alt="쿠폰">쿠폰</a>
+                            <a href="orderList.html"><img src="img/order.png" alt="주문내역">주문내역</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="studyInfo">
+                <h3>수강 정보</h3>
+                <div class="studyThumb">
+                    <div><a href="studyRoomDetail.html"><img src="img/img_ex1.png" alt=""><p><span>2021. 12. 04 까지 수강 가능</span></p></a></div>
+                    <div><a href="studyRoomDetail.html"><img src="img/img_ex2.png" alt=""><p><span>기간 만료</span></p></a></div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <h3>내 활동</h3>
+
+                <div>
+                    <div class="questionArea">
+                        <div>
+                            <h4>1:1문의</h4>
+                            <a href="questionList.html">+ 더보기</a>
+                        </div>
+                        <ul>
+                            <li><a href="question.html"><p>무료이용권은 언제까지 사용할 수 있나요? <span>NEW</span></p><p>2021-12-29</p></a></li>
+                            <li><a href="question.html"><p>무료이용권은 언제까지 사용할 수 있나요? <span>NEW</span></p><p>2021-12-29</p></a></li>
+                            <li><a href="question.html"><p>무료이용권은 언제까지 사용할 수 있나요? <span>NEW</span></p><p>2021-12-29</p></a></li>
+                            <li><a href="question.html"><p>무료이용권은 언제까지 사용할 수 있나요? <span>NEW</span></p><p>2021-12-29</p></a></li>
+                        </ul>
+                    </div>
+                    <div class="recentReferArea">
+                        <div>
+                            <h4>최근 다운 받은 자료</h4>
+                        </div>
+                            <ul>
+                                <li><a href="reference.html"><p>2021년도 공무원 영어 기출 자료</p><p>2021-12-29</p></a></li>
+                                <li><a href="reference.html"><p>2021년도 공무원 영어 기출 자료</p><p>2021-12-29</p></a></li>
+                                <li><a href="reference.html"><p>2021년도 공무원 영어 기출 자료</p><p>2021-12-29</p></a></li>
+                                <li><a href="reference.html"><p>2021년도 공무원 영어 기출 자료</p><p>2021-12-29</p></a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </main>
+
+    <div class="topBtn"><img src="img/topBtn.png" alt="맨위로"></div>
+    <popup></popup>
+    <footer></footer>
+
+    <script>
+        $(function(){
+            $('.studyThumb div a').on('click',function(e){
+                e.preventDefault();
+                console.log('aa')
+                $('popup').load('popup.html .planPurchase_popup_bg');
+            });
+
+            $(document).on('click','.closePop',function(){
+                $('.popup_bg').hide();
+            });
+
+            $('.popOK2').on('click',function(){
+                window.location.href ="plan.html"
+            });
+        });
+    </script>
+</body>
+</html>

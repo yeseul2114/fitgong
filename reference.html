@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="notiList">
+            <h2>자료실</h2>
+
+            <div class="tableCon">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="color:#8915f2">카테고리 종류</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h2>자료실 제목 <span class="new">NEW</span></h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>작성자 : <span>이*슬</span> ⎮ 일자 : <span>2021. 12. 24</span> ⎮ 조회수 : <span>3456</span></p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableContent">
+                        <tr>
+                            <td>
+                                안녕하세요.
+                                자료실입니다.
+
+                                핏공에서 제공하는 자료는 이 페이지에서 다운받을 수 있습니다
+                                감사합니다.
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fileUpLoadArea">
+                                <p><img src="img/img.png" alt="이미지"> 첨부파일 확인 1.jpg</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fileUpLoadArea">
+                                <p><img src="img/img.png" alt="이미지"> 첨부파일 확인 2.jpg</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="writeBtnArea"><button class="del">삭제하기</button> <button class="edit">수정하기</button></p>
+
+                <div class="commentTable">
+                    <div class="commentArea">
+                        <input type="checkbox" id="answer01">
+                        <label for="answer01">이예슬 ⎮ 2022. 01. 01<em></em></label>
+                        <div>
+                            <p>자료가 필요했는데 좋네요</p>
+                        </div>
+                        <input type="checkbox" id="answer02">
+                        <label for="answer02">최혜인 ⎮ 2022. 01. 02<em></em></label>
+                        <div>
+                            <p>두둠칫</p>
+                        </div>
+                        <input type="checkbox" id="answer03">
+                        <label for="answer03">김재혁 ⎮ 2022. 01. 03<em></em></label>
+                        <div>
+                            <p>퍼가요~ ❤️</p>
+                        </div>
+                    </div>
+
+                    <div class="commentTextarea">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <p><button class="enroll">등록하기</button></p>
+                    </div>
+
+                </div>
+
+                <table class="nextNoti">
+                    <tr>
+                        <td>이전글</td>
+                        <td>자료실 1</td>
+                        <td>2021. 12. 25</td>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <td>다음글</td>
+                        <td>자료실 3</td>
+                        <td>2021. 12. 27</td>
+                        <td>1234</td>
+                    </tr>
+                </table>
+                <p><button class="goList">목록</button></p>
+            </div>
+        </div>
+    </main>
+
+    <div class="topBtn"><img src="img/topBtn.png" alt="맨위로"></div>
+
+    <footer></footer>
+
+    <script>
+        $(function(){
+            $('.edit').on('click',function(){
+                window.location.href='referWrite.html'
+            });
+
+            $('.enroll').on('click',function(){
+                var text = $('.commentTextarea textarea').val();
+
+                var commentForm;
+
+                commentForm = "<input type='checkbox' id='answer01'>"
+                commentForm += "<label for='answer01'>이예슬 ⎮ 2022. 01. 01<em></em></label>"
+                commentForm += "<div><p>" + text + "</p></div>"
+
+                $(this).parent().siblings().after(commentForm);
+            });
+        });
+    </script>
+</body>
+
+</html>

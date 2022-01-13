@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="signUp">
+
+            <h2>MY FIT</h2>
+
+            <div class="register_form">
+                <div class="regi_top"><p>내 정보 수정</p> <span>* 필수사항</span></div>
+
+                <form action="">
+                    <div class="regi_bottom">
+                        <p class="email">
+                            <label><span style="color:#2393fd;">*</span>이메일</label>
+                            <input type="email" readonly placeholder="yeseul.lee@ai-mon.com" required>
+                        </p>
+                        <p class="pwArea">
+                            <label><span style="color:#2393fd;">*</span>비밀번호</label>
+                            <input class="pw" type="password" placeholder="비밀번호를 입력해 주세요." required>
+                            <svg class="infoEye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                                height="18">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                            </svg>
+                            <span>* 10자 이상 영문/숫자/특수문자를 사용하세요.</span>
+                        </p>
+                        <p class="nameArea">
+                            <label><span style="color:#2393fd;">*</span>이름</label>
+                            <input type="text" readonly placeholder="이름을 입력해 주세요." required> 
+                            <span>* 개명으로 인해 이름 변경이 필요하신 분은 1:1문의 남겨주세요.</span>
+                        </p>
+                        <p class="phone infoEditPhone">
+                            <label><span style="color:#2393fd;">*</span>휴대전화</label>
+                            <input type="text" readonly> - <input type="text" readonly> - <input type="text" readonly>
+                            <button class="edit">수정</button>
+                            <button class="editCancle edit2">취소</button> <button class="confirm edit2">인증번호 전송</button>
+                        </p>
+                        <p class="phoneCon infoEditPhoneCon">
+                            <label><span style="color:#2393fd;">*</span>인증번호</label>
+                            <input type="text" readonly placeholder="인증번호를 입력해 주세요." required>
+                            <button>확인</button>
+                            <span>* 휴대폰으로 전송된 인증번호를 입력하세요.</span>
+                        </p>
+                        <p><input class="submit_btn" type="submit" value="수정하기"></p>
+                        <button class="withdraw">회원탈퇴</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <popup></popup>
+    <script>
+        $(function(){
+            $('.edit').on('click',function(){
+                $(this).css('display','none');
+                $('.edit2').css('display','inline-block');
+            });
+
+            $('.editCancle').on('click',function(){
+                $('.edit2').css('display','none');
+                $('.edit').css('display','inline-block')
+            });
+
+            $('.submit_btn').on('click',function(){
+                $('popup').load('popup.html .infoEditOk_popup_bg');
+            });
+
+            $('.withdraw').on('click',function(){
+                $('popup').load('popup.html .withdrawDanger_popup_bg');
+            });
+
+            $(document).on('click','.closePop',function(){
+                $('.popup_bg').hide();
+            });
+
+            $(document).on('click','.withrawGo',function(){
+                $('popup').load('popup.html .withdrawOk_popup_bg');
+            });
+
+
+            $('.infoEye').on('click', function () {
+                $(this).toggleClass('on');
+
+                if ($('.infoEye').hasClass('on') == true) {
+                    $('.pw').attr('type', 'text');
+                } else {
+                    $('.pw').attr('type', 'password');
+                }
+
+            });
+
+            $('.editCancle').on('click',function(){
+                $('.infoEditPhoneCon').css('display','none')
+                $('.infoEditPhone').removeClass('on');
+            });
+
+            $('.confirm').on('click',function(){
+                $('.infoEditPhoneCon').css('display','block')
+                $('.infoEditPhone').addClass('on');
+            });
+        });
+    </script>
+
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="faq">
+            <h2>FAQ</h2>
+
+            <ul class="faqTab">
+                <li class="allFaq active">전체</li>
+                <li class="siteFaq">사이트 이용</li>
+                <li class="userFaq">회원 정보</li>
+                <li class="payFaq">결제 및 환불</li>
+                <li class="videoFaq">강좌</li>
+                <li class="bookFaq">교재 배송</li>
+            </ul>
+            <div class="faqSearch">
+                <p>전체 게시글 <span style="color:#f99b7e;">277개</span></p>
+                <p><input type="search" placeholder="Search"> <img src="img/faqSearch.png" alt="돋보기"></p>
+            </div>
+            <div class="faqTabCon">
+                <div class="active">
+                    <input type="checkbox" id="answer01">
+                    <label for="answer01">Q. 강의를 들을려면 어떻게 해야 하나요? <span class="new">NEW</span><em></em></label>
+                    <div><p>A. 회원가입 하신 후에 이용권 혹은 강의별 구매하신 뒤 수강이 가능합니다.</p></div>
+                    <input type="checkbox" id="answer02">
+                    <label for="answer02">Q. 강의 커리큘럼은 어디서 확인할 수 있나요?<em></em></label>
+                    <div><p>A. 메인페이지 하단에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer03">
+                    <label for="answer03">Q. 이용권의 일시 정지 기능이 있나요?<em></em></label>
+                    <div><p>A. 현재는 불가하지만, 향 후 라인업이 늘어남에 따라 변경될 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer04">
+                    <label for="answer04">Q. 회원 정보 수정은 어디서 하나요?<em></em></label>
+                    <div><p>A. MY FIT에서 내정보 수정 클릭 후 가능합니다.</p></div>
+                    <input type="checkbox" id="answer05">
+                    <label for="answer05">Q. 아이디/비밀번호를 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 아이디는 변경할 수 없으며, 비밀번호는 MY FIT > 내 정보 수정에서 변경 가능합니다.</p></div>
+                    <input type="checkbox" id="answer06">
+                    <label for="answer06">Q. 아이디/비밀번호를 분실했습니다.<em></em></label>
+                    <div><p>A. 로그인 페이지에서 아이디/비밀번호 찾기에서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer07">
+                    <label for="answer07">Q. 회원탈퇴를 하고싶습니다.<em></em></label>
+                    <div><p>A. MY FIT > 내정보 수정 하단에서 회원탈퇴가 가능합니다.</p></div>
+                    <input type="checkbox" id="answer08">
+                    <label for="answer08">Q. 탈퇴 후 재가입이 가능한가요?<em></em></label>
+                    <div><p>A. 탈퇴 후 재가입은 가능하지만 기존의 아이디로는 가입할 수 없습니다.</p></div>
+                    <input type="checkbox" id="answer09">
+                    <label for="answer09">Q. 한 사람이 여러 개의 아이디를 보유할 수 있나요?<em></em></label>
+                    <div><p>A. 실명인증 후 회원가입을 하기 때문에 여러개의 아이디를 보유할 수 없습니다.</p></div>
+                    <input type="checkbox" id="answer10">
+                    <label for="answer10">Q. 회원가입을 하려는데 이미 가입된 휴대폰이라고 나옵니다.<em></em></label>
+                    <div><p>A. 로그인 페이지에서 아이디/비밀번호 찾기를 통해 가입된 계정을 찾을 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer11">
+                    <label for="answer11">Q. 이용권 혹은 교재 구매 시 체크카드 결제도 가능한가요?<em></em></label>
+                    <div><p>A. 결제 시 신용카드 선택 후 결제해주세요.</p></div>
+                    <input type="checkbox" id="answer12">
+                    <label for="answer12">Q. 결제한 이용권 및 교재 구매 내역을 알고 싶습니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역 페이지에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer13">
+                    <label for="answer13">Q. 교재 구매 취소는 어디서 하나요?<em></em></label>
+                    <div><p>A. 입금 확인 상태에서는 취소가 가능하며 MY FIT > 주문내역 페이지에서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer14">
+                    <label for="answer14">Q. 결제 실패라고 뜹니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역 페이지에서 확인 후 결제가 완료되었다면 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer15">
+                    <label for="answer15">Q. 할부를 해야 하는데 일시불로 잘못 결제했습니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역에서 결제 취소 후 다시 결제 해주세요.</p></div>
+                    <input type="checkbox" id="answer16">
+                    <label for="answer16">Q. 이용권 구매 및 교재 구매는 어디서 하나요?<em></em></label>
+                    <div><p>A. 이용권 구매는 상품구매 > 이용권 탭에서 구매 가능하고, 교재는 상품구매 > 교재 탭에서 구매 가능합니다.</p></div>
+                    <input type="checkbox" id="answer17">
+                    <label for="answer17">Q. 강의를 들을 수 있는 시간이나 횟수가 정해져 있나요?<em></em></label>
+                    <div><p>A. 이용권을 구매하셨다면 시간, 횟수 상관 없이 수강 가능하며, 강의별 구매를 하셨다면 강의 1개를 수강하면 횟수가 1개 차감됩니다.</p></div>
+                    <input type="checkbox" id="answer18">
+                    <label for="answer18">Q. 오늘이 수강 종료일인데 몇 시까지 이용 가능한가요?<em></em></label>
+                    <div><p>A. 이용권 마감일 23시 59분 59초까지 이용 가능합니다.</p></div>
+                    <input type="checkbox" id="answer19">
+                    <label for="answer19">Q. 강의 수강에 필요한 자료는 어디서 다운 받을 수 있나요?<em></em></label>
+                    <div><p>A. 자료실 혹은 해당 강의에 첨부되어 있습니다.</p></div>
+                    <input type="checkbox" id="answer20">
+                    <label for="answer20">Q. 강의를 맛보기로 미리 수강할 수 있나요?<em></em></label>
+                    <div><p>A. 메인페이지 하단과 강의 페이지에서 샘플강의를 확인할 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer21">
+                    <label for="answer21">Q. 교안 파일이 열리지 않아요.<em></em></label>
+                    <div><p>A. 자료실 페이지에서 다시 확인한 후 열리지 않는다면 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer22">
+                    <label for="answer22">Q. 영상이 잘려서 나오지 않습니다.<em></em></label>
+                    <div><p>A. 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer23">
+                    <label for="answer23">Q. 수강 시작일을 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 현재 이용중이신 이용권을 환불 후에 결제해주세요. 단, 강의를 듣지 않은 경우에 한해서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer24">
+                    <label for="answer24">Q. 강의 업데이트 일정은 어디서 확인할 수 있나요?<em></em></label>
+                    <div><p>A. 공지사항에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer25">
+                    <label for="answer25">Q. 강의 배수 및 배수 제한을 확인하는 방법은 무엇인가요?<em></em></label>
+                    <div><p>A. FITGONG에서는 이용권을 이용하기 때뭉네 배수 제한이 없습니다.</p></div>
+                    <input type="checkbox" id="answer26">
+                    <label for="answer26">Q. 재생 속도(배속)은 어떻게 조절하나요?<em></em></label>
+                    <div><p>A. 동영상 화면 하단 톱니바퀴를 클릭해서 조절할 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer27">
+                    <label for="answer27">Q. 재수강을 하고 싶습니다.<em></em></label>
+                    <div><p>A. 이용권을 이용중이신 경우 언제든지 수강 가능합니다.</p></div>
+                    <input type="checkbox" id="answer28">
+                    <label for="answer28">Q. 배송 추적 방법이 궁금합니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문/배송에서 확인하실 수 있습니다. 자세한 내용은 주문 상세페이지에서 확인하실 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer29">
+                    <label for="answer29">Q. 교재를 주문하였는데 배송 추적이 불가합니다.<em></em></label>
+                    <div><p>A. 교재를 일괄로 보내기 때문에 운송장 번호가 나오기 전까지 시간이 걸립니다. 만약, 1~2일이 지나도 나오지 않는다면 1:1문의를 통해 문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer30">
+                    <label for="answer30">Q. 배송지가 다른 경우에도 한 번에 주문할 수 있나요?<em></em></label>
+                    <div><p>A. 번거로우시더라도 배송지가 다른 경우에는 따로 주문 바랍니다.</p></div>
+                    <input type="checkbox" id="answer31">
+                    <label for="answer31">Q. 배송지를 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 주문 확인 상태에서는 가능하나, 배송이 시작되면 배송지 변경이 불가합니다. 배송이 완료된 후 배송지 변경도 불가합니다.</p></div>
+                    <input type="checkbox" id="answer32">
+                    <label for="answer32">Q. 파본 교재를 받았습니다.<em></em></label>
+                    <div><p>A. 수령일로부터 7일 이내 1:1문의에 사진과 함꼐 올려주시면 확인 후 안내 도와드리겠습니다.</p></div>
+                    <input type="checkbox" id="answer33">
+                    <label for="answer33">Q. 해외로도 교재 배송이 가능한가요?<em></em></label>
+                    <div><p>A. 해외배송 요청 시 우체국 국제특급(EMS)로 배송가능하며, 국가별 요금에 따라 배송료가 상이합니다. 1:1문의를 주시면 확인 후 안내드리도록 하겠습니다.</p></div>
+                    <input type="checkbox" id="answer34">
+                    <label for="answer34">Q. 사이트 가입 없이 전화로 교재 주문이 가능한가요?<em></em></label>
+                    <div><p>A. FITGONG사이트 뿐만 아니라 서점, yes24에서도 구입 가능합니다.</p></div>
+                    <input type="checkbox" id="answer35">
+                    <label for="answer35">Q. 교재 정오표를 확인하고 싶습니다.<em></em></label>
+                    <div><p>A. 공지사항에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer36">
+                    <label for="answer36">Q. 주소지 검색이 안됩니다.<em></em></label>
+                    <div><p>A. 신주소거나 주소가 인식이 안되는 경우가 있습니다. 1:1문의 주시면 주소변경을 도와드리도록 하겠습니다.</p></div>
+                    <input type="checkbox" id="answer37">
+                    <label for="answer37">Q. 교재 교환 또는 반품은 어떻게 하나요?<em></em></label>
+                    <div><p>A. 수령일로부터 7일 이내 1:1문의 주시면 확인 후 안내 도와드리겠습니다. 단순변심으로 인한 교환, 반품은 택배 왕복비 5,000원이 부과됩니다.</p></div>
+                </div>
+                <div class="">
+                    <input type="checkbox" id="answer38">
+                    <label for="answer38">Q. 강의를 들을려면 어떻게 해야 하나요? <span class="new">NEW</span><em></em></label>
+                    <div><p>A. 회원가입 하신 후에 이용권 혹은 강의별 구매하신 뒤 수강이 가능합니다.</p></div>
+                    <input type="checkbox" id="answer39">
+                    <label for="answer39">Q. 강의 커리큘럼은 어디서 확인할 수 있나요?<em></em></label>
+                    <div><p>A. 메인페이지 하단에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer40">
+                    <label for="answer40">Q. 이용권의 일시 정지 기능이 있나요?<em></em></label>
+                    <div><p>A. 현재는 불가하지만, 향 후 라인업이 늘어남에 따라 변경될 수 있습니다.</p></div>
+                </div>
+                <div class="">
+                    <input type="checkbox" id="answer41">
+                    <label for="answer41">Q. 회원 정보 수정은 어디서 하나요?<em></em></label>
+                    <div><p>A. MY FIT에서 내정보 수정 클릭 후 가능합니다.</p></div>
+                    <input type="checkbox" id="answer42">
+                    <label for="answer42">Q. 아이디/비밀번호를 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 아이디는 변경할 수 없으며, 비밀번호는 MY FIT > 내 정보 수정에서 변경 가능합니다.</p></div>
+                    <input type="checkbox" id="answer43">
+                    <label for="answer43">Q. 아이디/비밀번호를 분실했습니다.<em></em></label>
+                    <div><p>A. 로그인 페이지에서 아이디/비밀번호 찾기에서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer44">
+                    <label for="answer44">Q. 회원탈퇴를 하고싶습니다.<em></em></label>
+                    <div><p>A. MY FIT > 내정보 수정 하단에서 회원탈퇴가 가능합니다.</p></div>
+                    <input type="checkbox" id="answer45">
+                    <label for="answer45">Q. 탈퇴 후 재가입이 가능한가요?<em></em></label>
+                    <div><p>A. 탈퇴 후 재가입은 가능하지만 기존의 아이디로는 가입할 수 없습니다.</p></div>
+                    <input type="checkbox" id="answer46">
+                    <label for="answer46">Q. 한 사람이 여러 개의 아이디를 보유할 수 있나요?<em></em></label>
+                    <div><p>A. 실명인증 후 회원가입을 하기 때문에 여러개의 아이디를 보유할 수 없습니다.</p></div>
+                    <input type="checkbox" id="answer47">
+                    <label for="answer47">Q. 회원가입을 하려는데 이미 가입된 휴대폰이라고 나옵니다.<em></em></label>
+                    <div><p>A. 로그인 페이지에서 아이디/비밀번호 찾기를 통해 가입된 계정을 찾을 수 있습니다.</p></div>
+                </div>
+                <div>
+                    <input type="checkbox" id="answer48">
+                    <label for="answer48">Q. 이용권 혹은 교재 구매 시 체크카드 결제도 가능한가요?<em></em></label>
+                    <div><p>A. 결제 시 신용카드 선택 후 결제해주세요.</p></div>
+                    <input type="checkbox" id="answer49">
+                    <label for="answer49">Q. 결제한 이용권 및 교재 구매 내역을 알고 싶습니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역 페이지에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer50">
+                    <label for="answer50">Q. 교재 구매 취소는 어디서 하나요?<em></em></label>
+                    <div><p>A. 입금 확인 상태에서는 취소가 가능하며 MY FIT > 주문내역 페이지에서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer51">
+                    <label for="answer51">Q. 결제 실패라고 뜹니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역 페이지에서 확인 후 결제가 완료되었다면 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer52">
+                    <label for="answer52">Q. 할부를 해야 하는데 일시불로 잘못 결제했습니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문내역에서 결제 취소 후 다시 결제 해주세요.</p></div>
+                </div>
+                <div>
+                    <input type="checkbox" id="answer53">
+                    <label for="answer53">Q. 이용권 구매 및 교재 구매는 어디서 하나요?<em></em></label>
+                    <div><p>A. 이용권 구매는 상품구매 > 이용권 탭에서 구매 가능하고, 교재는 상품구매 > 교재 탭에서 구매 가능합니다.</p></div>
+                    <input type="checkbox" id="answer54">
+                    <label for="answer54">Q. 강의를 들을 수 있는 시간이나 횟수가 정해져 있나요?<em></em></label>
+                    <div><p>A. 이용권을 구매하셨다면 시간, 횟수 상관 없이 수강 가능하며, 강의별 구매를 하셨다면 강의 1개를 수강하면 횟수가 1개 차감됩니다.</p></div>
+                    <input type="checkbox" id="answer55">
+                    <label for="answer55">Q. 오늘이 수강 종료일인데 몇 시까지 이용 가능한가요?<em></em></label>
+                    <div><p>A. 이용권 마감일 23시 59분 59초까지 이용 가능합니다.</p></div>
+                    <input type="checkbox" id="answer56">
+                    <label for="answer56">Q. 강의 수강에 필요한 자료는 어디서 다운 받을 수 있나요?<em></em></label>
+                    <div><p>A. 자료실 혹은 해당 강의에 첨부되어 있습니다.</p></div>
+                    <input type="checkbox" id="answer57">
+                    <label for="answer57">Q. 강의를 맛보기로 미리 수강할 수 있나요?<em></em></label>
+                    <div><p>A. 메인페이지 하단과 강의 페이지에서 샘플강의를 확인할 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer58">
+                    <label for="answer58">Q. 교안 파일이 열리지 않아요.<em></em></label>
+                    <div><p>A. 자료실 페이지에서 다시 확인한 후 열리지 않는다면 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer59">
+                    <label for="answer59">Q. 영상이 잘려서 나오지 않습니다.<em></em></label>
+                    <div><p>A. 1:1문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer60">
+                    <label for="answer60">Q. 수강 시작일을 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 현재 이용중이신 이용권을 환불 후에 결제해주세요. 단, 강의를 듣지 않은 경우에 한해서 가능합니다.</p></div>
+                    <input type="checkbox" id="answer61">
+                    <label for="answer61">Q. 강의 업데이트 일정은 어디서 확인할 수 있나요?<em></em></label>
+                    <div><p>A. 공지사항에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer62">
+                    <label for="answer62">Q. 강의 배수 및 배수 제한을 확인하는 방법은 무엇인가요?<em></em></label>
+                    <div><p>A. FITGONG에서는 이용권을 이용하기 때뭉네 배수 제한이 없습니다.</p></div>
+                    <input type="checkbox" id="answer63">
+                    <label for="answer63">Q. 재생 속도(배속)은 어떻게 조절하나요?<em></em></label>
+                    <div><p>A. 동영상 화면 하단 톱니바퀴를 클릭해서 조절할 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer64">
+                    <label for="answer64">Q. 재수강을 하고 싶습니다.<em></em></label>
+                    <div><p>A. 이용권을 이용중이신 경우 언제든지 수강 가능합니다.</p></div>
+                </div>
+                <div>
+                    <input type="checkbox" id="answer65">
+                    <label for="answer65">Q. 배송 추적 방법이 궁금합니다.<em></em></label>
+                    <div><p>A. MY FIT > 주문/배송에서 확인하실 수 있습니다. 자세한 내용은 주문 상세페이지에서 확인하실 수 있습니다.</p></div>
+                    <input type="checkbox" id="answer66">
+                    <label for="answer66">Q. 교재를 주문하였는데 배송 추적이 불가합니다.<em></em></label>
+                    <div><p>A. 교재를 일괄로 보내기 때문에 운송장 번호가 나오기 전까지 시간이 걸립니다. 만약, 1~2일이 지나도 나오지 않는다면 1:1문의를 통해 문의 바랍니다.</p></div>
+                    <input type="checkbox" id="answer67">
+                    <label for="answer67">Q. 배송지가 다른 경우에도 한 번에 주문할 수 있나요?<em></em></label>
+                    <div><p>A. 번거로우시더라도 배송지가 다른 경우에는 따로 주문 바랍니다.</p></div>
+                    <input type="checkbox" id="answer68">
+                    <label for="answer68">Q. 배송지를 변경하고 싶습니다.<em></em></label>
+                    <div><p>A. 주문 확인 상태에서는 가능하나, 배송이 시작되면 배송지 변경이 불가합니다. 배송이 완료된 후 배송지 변경도 불가합니다.</p></div>
+                    <input type="checkbox" id="answer69">
+                    <label for="answer69">Q. 파본 교재를 받았습니다.<em></em></label>
+                    <div><p>A. 수령일로부터 7일 이내 1:1문의에 사진과 함꼐 올려주시면 확인 후 안내 도와드리겠습니다.</p></div>
+                    <input type="checkbox" id="answer70">
+                    <label for="answer70">Q. 해외로도 교재 배송이 가능한가요?<em></em></label>
+                    <div><p>A. 해외배송 요청 시 우체국 국제특급(EMS)로 배송가능하며, 국가별 요금에 따라 배송료가 상이합니다. 1:1문의를 주시면 확인 후 안내드리도록 하겠습니다.</p></div>
+                    <input type="checkbox" id="answer71">
+                    <label for="answer71">Q. 사이트 가입 없이 전화로 교재 주문이 가능한가요?<em></em></label>
+                    <div><p>A. FITGONG사이트 뿐만 아니라 서점, yes24에서도 구입 가능합니다.</p></div>
+                    <input type="checkbox" id="answer72">
+                    <label for="answer72">Q. 교재 정오표를 확인하고 싶습니다.<em></em></label>
+                    <div><p>A. 공지사항에서 확인 가능합니다.</p></div>
+                    <input type="checkbox" id="answer73">
+                    <label for="answer73">Q. 주소지 검색이 안됩니다.<em></em></label>
+                    <div><p>A. 신주소거나 주소가 인식이 안되는 경우가 있습니다. 1:1문의 주시면 주소변경을 도와드리도록 하겠습니다.</p></div>
+                    <input type="checkbox" id="answer74">
+                    <label for="answer74">Q. 교재 교환 또는 반품은 어떻게 하나요?<em></em></label>
+                    <div><p>A. 수령일로부터 7일 이내 1:1문의 주시면 확인 후 안내 도와드리겠습니다. 단순변심으로 인한 교환, 반품은 택배 왕복비 5,000원이 부과됩니다.</p></div>
+                </div>
+            </div>
+
+
+            <div class="page">
+                <ul>
+                    <li><a href="#" class="prev_page">&lt;&lt;</a></li>
+                    <li><a href="#" class="prev_page">&lt;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#" class="next_page">&gt;</a></li>
+                    <li><a href="#" class="next_page">&gt;&gt;</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div class="topBtn"><img src="img/topBtn.png" alt="맨위로"></div>
+
+    <footer></footer>
+
+    <script>
+        $(function(){
+            $('.faqTab li').on('click',function(){
+                $('.faqTab li').removeClass('active');
+                $(this).addClass('active');
+
+                var tabIdx = $(this).index();
+                $('.faqTabCon > div').removeClass('active');
+                $('.faqTabCon > div').eq(tabIdx).addClass('active')
+            });
+
+            console.log($('.faqTabCon').children())
+        });
+    </script>
+</body>
+</html>

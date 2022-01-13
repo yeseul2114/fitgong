@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITGONG</title>
+    <link rel="icon" href="img/favi.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <div class="id_find">
+            <h2>아이디/비밀번호 찾기</h2>
+
+            <ul class="id_tab">
+                <li><a href="idFind.html">아이디 찾기</a></li>
+                <li class="active"><a href="pwFind.html">비밀번호 찾기</a></li>
+            </ul>
+
+            <div class="pw_tab_con pwFindResetCons">
+                <p class="pw_find_result_s">본인인증에 성공했습니다.
+                    <span style="color:#095ce5;">새로운 비밀번호</span>를 설정해 주세요.
+                </p>
+                <p class="pwResetArea">
+                    <label style="color:#095ce5;">* 새
+                        비밀번호</label>
+                    <input class="pw" type="password" placeholder="*비밀번호" required>
+                    <svg class="pwResetEye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                        height="18">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg>
+                    <span>* 10자 이상 영문/숫자/특수문자를 사용하세요.</span>
+                </p>
+                <p class="pwSameSpan">
+                    <label style="color:#095ce5;">* 새
+                        비밀번호
+                        확인</label>
+                    <input class="pw_confirm" type="password" placeholder="*비밀번호 확인" required>
+                    <svg class="pwResetEyeCon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                        height="18">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg>
+                    <span class="pwNoSame">* 입력하신 정보가 일치하지 않습니다.</span>
+                    <span class="pwSame">* 입력하신 정보가 일치합니다.</span>
+                </p>
+                <p>
+                    <input type="submit" class="idFindBtn" value="비밀번호 변경">
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(function () {
+            $('.pwResetEye').on('click', function () {
+                $(this).toggleClass('on');
+
+                if ($('.pwResetEye').hasClass('on') == true) {
+                    $('.pw').attr('type', 'text');
+                } else {
+                    $('.pw').attr('type', 'password');
+                }
+
+            });
+
+            $('.pwResetEyeCon').on('click', function () {
+                $(this).toggleClass('on');
+
+                if ($('.pwResetEyeCon').hasClass('on') == true) {
+                    $('.pw_confirm').attr('type', 'text');
+                } else {
+                    $('.pw_confirm').attr('type', 'password');
+                }
+            });
+
+            $('.pw_confirm').focusout(function () {
+
+                var pwd1 = $('.pw').val();
+                var pwd2 = $('.pw_confirm').val();
+
+                if (pwd1 != '' && pwd2 == '') {
+                    null;
+                } else if (pwd1 != "" || pwd2 != "") {
+                    if (pwd1 != pwd2) {
+                        $('.pwSame').css('display', 'none');
+                        $('.pwNoSame').css('display', 'block');
+                    } else if (pwd1 == pwd2) {
+                        $('.pwNoSame').css('display', 'none');
+                        $('.pwSame').css('display', 'block');
+                    }
+                }
+            });
+
+        });
+    </script>
+    <footer></footer>
+</body>
+
+</html>
